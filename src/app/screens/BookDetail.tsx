@@ -157,17 +157,32 @@ export function BookDetail() {
         {/* Price + Buy Buttons */}
         <div>
           <p className="text-2xl font-bold mb-3">{book.price}</p>
-          <button className="w-full py-3 bg-green-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2 mb-2 hover:bg-green-700 transition-colors">
+          <a
+            href={book.purchaseLinks.bookshop}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-3 bg-green-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2 mb-2 hover:bg-green-700 transition-colors"
+          >
             <ExternalLink size={16} />
             Bei Bookshop.org kaufen
-          </button>
+          </a>
           <div className="grid grid-cols-2 gap-2">
-            <button className="py-2.5 border border-gray-200 text-gray-700 font-medium rounded-xl text-sm hover:bg-gray-50 transition-colors">
+            <a
+              href={book.purchaseLinks.thalia}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-2.5 border border-gray-200 text-gray-700 font-medium rounded-xl text-sm hover:bg-gray-50 transition-colors text-center"
+            >
               Thalia
-            </button>
-            <button className="py-2.5 border border-gray-200 text-gray-700 font-medium rounded-xl text-sm hover:bg-gray-50 transition-colors">
+            </a>
+            <a
+              href={book.purchaseLinks.amazon}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-2.5 border border-gray-200 text-gray-700 font-medium rounded-xl text-sm hover:bg-gray-50 transition-colors text-center"
+            >
               Amazon
-            </button>
+            </a>
           </div>
         </div>
 

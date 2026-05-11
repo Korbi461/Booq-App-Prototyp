@@ -12,6 +12,12 @@ export interface UserReview {
   text: string;
 }
 
+export interface PurchaseLinks {
+  bookshop: string;
+  thalia: string;
+  amazon: string;
+}
+
 export interface Book {
   id: string;
   title: string;
@@ -25,6 +31,7 @@ export interface Book {
   coverUrl: string;
   criteria: CriteriaRating;
   reviews: UserReview[];
+  purchaseLinks: PurchaseLinks;
   matchScore: number;
   averageRating: number;
 }
@@ -52,6 +59,11 @@ const rawBooks = [
       { username: 'Lea.Pageturner', stars: 5, text: 'Vera ist eine der faszinierendsten Protagonistinnen seit Jahren. Komplex, fehlerhaft, brillant.' },
       { username: 'roman_reads', stars: 4, text: 'Der Schreibstil ist auf hohem Niveau, manchmal etwas überladen – aber der Plot macht das mehr als wett.' },
     ],
+    purchaseLinks: {
+      bookshop: 'https://bookshop.org/books?keywords=9780307454546&affiliateTag=booq-demo',
+      thalia: 'https://www.thalia.de/suche?sq=9780307454546&affiliateTag=booq-demo',
+      amazon: 'https://www.amazon.de/s?k=9780307454546&tag=booq-demo-21',
+    },
     matchScore: 92,
   },
   {
@@ -71,6 +83,11 @@ const rawBooks = [
       { username: 'buchstabe.kai', stars: 3, text: 'Kael ist ein toller Protagonist, aber die Nebencharaktere bleiben leider etwas blass.' },
       { username: 'lena.liest.alles', stars: 5, text: 'Für Fantasy-Fans ein absolutes Muss. Der zweite Band kann nicht schnell genug kommen.' },
     ],
+    purchaseLinks: {
+      bookshop: 'https://bookshop.org/books?keywords=9780765326355&affiliateTag=booq-demo',
+      thalia: 'https://www.thalia.de/suche?sq=9780765326355&affiliateTag=booq-demo',
+      amazon: 'https://www.amazon.de/s?k=9780765326355&tag=booq-demo-21',
+    },
     matchScore: 84,
   },
   {
@@ -90,6 +107,11 @@ const rawBooks = [
       { username: 'max.ohne.worte', stars: 4, text: 'Wer Action erwartet, ist hier falsch. Wer Literatur liebt, wird belohnt.' },
       { username: 'buchclub.anna', stars: 5, text: 'Eine Ausnahmestimme schreibt wie jemand, der wirklich etwas zu sagen hat. Selten geworden.' },
     ],
+    purchaseLinks: {
+      bookshop: 'https://bookshop.org/books?keywords=9780571334650&affiliateTag=booq-demo',
+      thalia: 'https://www.thalia.de/suche?sq=9780571334650&affiliateTag=booq-demo',
+      amazon: 'https://www.amazon.de/s?k=9780571334650&tag=booq-demo-21',
+    },
     matchScore: 78,
   },
   {
@@ -109,6 +131,11 @@ const rawBooks = [
       { username: 'kritisch.lesen', stars: 3, text: 'Konzept sensationell, die Charaktere hätten mehr Tiefe verdient.' },
       { username: 'zukunft.leser', stars: 4, text: 'Orwell erfindet das Genre nicht neu, aber er spielt es besser als die meisten.' },
     ],
+    purchaseLinks: {
+      bookshop: 'https://bookshop.org/books?keywords=9780451524935&affiliateTag=booq-demo',
+      thalia: 'https://www.thalia.de/suche?sq=9780451524935&affiliateTag=booq-demo',
+      amazon: 'https://www.amazon.de/s?k=9780451524935&tag=booq-demo-21',
+    },
     matchScore: 88,
   },
   {
@@ -128,6 +155,11 @@ const rawBooks = [
       { username: 'nacht.leser99', stars: 5, text: 'Ich musste zweimal aufhören und Licht anlassen. Höchste Empfehlung.' },
       { username: 'sachlich.gelesen', stars: 4, text: 'Für Horror-Verhältnisse sehr literarisch. Wer Splatter erwartet, liegt falsch.' },
     ],
+    purchaseLinks: {
+      bookshop: 'https://bookshop.org/books?keywords=9780143039983&affiliateTag=booq-demo',
+      thalia: 'https://www.thalia.de/suche?sq=9780143039983&affiliateTag=booq-demo',
+      amazon: 'https://www.amazon.de/s?k=9780143039983&tag=booq-demo-21',
+    },
     matchScore: 76,
   },
   {
@@ -147,6 +179,11 @@ const rawBooks = [
       { username: 'romantik.robin', stars: 4, text: 'Wunderschön. Manchmal etwas vorhersehbar, aber das verzeiht man gerne.' },
       { username: 'lesezeit.clara', stars: 5, text: 'Das perfekte Buch für einen Regentag mit Tee. Absolut empfehlenswert.' },
     ],
+    purchaseLinks: {
+      bookshop: 'https://bookshop.org/books?keywords=Me%20Before%20You%20Jojo%20Moyes&affiliateTag=booq-demo',
+      thalia: 'https://www.thalia.de/suche?sq=Me%20Before%20You%20Jojo%20Moyes&affiliateTag=booq-demo',
+      amazon: 'https://www.amazon.de/s?k=Me%20Before%20You%20Jojo%20Moyes&tag=booq-demo-21',
+    },
     matchScore: 81,
   },
   {
@@ -166,6 +203,11 @@ const rawBooks = [
       { username: 'wien.liebhaberin', stars: 5, text: 'Das Wien dieser Epoche lebt auf jeder Seite. Zafón malt mit Worten.' },
       { username: 'leser.lars', stars: 3, text: 'Das letzte Drittel hat mich etwas weniger überzeugt – trotzdem ein starkes Buch.' },
     ],
+    purchaseLinks: {
+      bookshop: 'https://bookshop.org/books?keywords=9780143034902&affiliateTag=booq-demo',
+      thalia: 'https://www.thalia.de/suche?sq=9780143034902&affiliateTag=booq-demo',
+      amazon: 'https://www.amazon.de/s?k=9780143034902&tag=booq-demo-21',
+    },
     matchScore: 87,
   },
   {
@@ -185,6 +227,11 @@ const rawBooks = [
       { username: 'literatur.lukas', stars: 5, text: 'Chbosky ist eine Ausnahmestimme. Dieser Roman verdient mehr Aufmerksamkeit.' },
       { username: 'ehrlich.eva', stars: 4, text: 'Mir war es stellenweise zu langsam – aber die Charaktere haben mich trotzdem gefesselt.' },
     ],
+    purchaseLinks: {
+      bookshop: 'https://bookshop.org/books?keywords=9781451696196&affiliateTag=booq-demo',
+      thalia: 'https://www.thalia.de/suche?sq=9781451696196&affiliateTag=booq-demo',
+      amazon: 'https://www.amazon.de/s?k=9781451696196&tag=booq-demo-21',
+    },
     matchScore: 73,
   },
   {
@@ -204,6 +251,11 @@ const rawBooks = [
       { username: 'genre.hopper', stars: 5, text: 'Wer denkt, SciFi und Romance passen nicht zusammen, muss dieses Buch lesen.' },
       { username: 'kritik.käthe', stars: 3, text: 'Sprachlich sehr schön, der Plot ist aber dünn. Lebt von der Stimmung, nicht der Handlung.' },
     ],
+    purchaseLinks: {
+      bookshop: 'https://bookshop.org/books?keywords=9781500453305&affiliateTag=booq-demo',
+      thalia: 'https://www.thalia.de/suche?sq=9781500453305&affiliateTag=booq-demo',
+      amazon: 'https://www.amazon.de/s?k=9781500453305&tag=booq-demo-21',
+    },
     matchScore: 80,
   },
   {
@@ -223,6 +275,11 @@ const rawBooks = [
       { username: 'thriller.tanja', stars: 5, text: 'Flynn verwebt Fakten und Fiktion so geschickt, dass ich mehrfach googeln musste.' },
       { username: 'nüchtern.norbert', stars: 4, text: 'Etwas konstruiert am Ende – aber der Weg dorthin ist außergewöhnlich.' },
     ],
+    purchaseLinks: {
+      bookshop: 'https://bookshop.org/books?keywords=9780307588371&affiliateTag=booq-demo',
+      thalia: 'https://www.thalia.de/suche?sq=9780307588371&affiliateTag=booq-demo',
+      amazon: 'https://www.amazon.de/s?k=9780307588371&tag=booq-demo-21',
+    },
     matchScore: 91,
   },
 ];
