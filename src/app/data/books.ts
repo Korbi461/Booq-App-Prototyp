@@ -60,9 +60,9 @@ const rawBooks = [
       { username: 'roman_reads', stars: 4, text: 'Der Schreibstil ist auf hohem Niveau, manchmal etwas überladen – aber der Plot macht das mehr als wett.' },
     ],
     purchaseLinks: {
-      bookshop: 'https://bookshop.org/books?keywords=9780307454546&affiliateTag=booq-demo',
-      thalia: 'https://www.thalia.de/suche?sq=9780307454546&affiliateTag=booq-demo',
-      amazon: 'https://www.amazon.de/s?k=9780307454546&tag=booq-demo-21',
+      bookshop: 'https://bookshop.org/p/books/the-girl-with-the-dragon-tattoo-stieg-larsson/57fdfd3c8826a1f2?ean=9780307454546&next=t&affiliateTag=booq-demo',
+      thalia: 'https://www.thalia.de/shop/home/artikeldetails/A1007376523?affiliateTag=booq-demo',
+      amazon: 'https://www.amazon.de/Girl-Dragon-Tattoo-Millennium-Band/dp/0307454541/ref=sr_1_1?dib=eyJ2IjoiMSJ9.MUuO1PEVYI44u1G-bP3pM5m2DYQyP55gUH9W1jsx1r4.BHI4Gt0FtJb-NJbDtSbsxk6fqjQ588y0xb-_dWm5BV8&dib_tag=se&keywords=9780307454546&qid=1778541103&sr=8-1&affiliateTag=booq-demo',
     },
     matchScore: 92,
   },
