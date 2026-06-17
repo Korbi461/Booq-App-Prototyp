@@ -117,6 +117,4 @@ export const router = createHashRouter([
     path: '*',
     element: <NotFound />,
   },
-], {
-  basename: import.meta.env.BASE_URL,
-});
+]);
