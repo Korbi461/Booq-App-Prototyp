@@ -1,4 +1,4 @@
-import { createBrowserRouter, Link, Navigate } from 'react-router';
+import { createHashRouter, Link, Navigate } from 'react-router';
 import { User } from 'lucide-react';
 import { storageGet } from './utils/storage';
 import { Discover } from './screens/Discover';
@@ -68,7 +68,7 @@ function FullscreenLayout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/onboarding/welcome',
     element: <FullscreenLayout><Welcome /></FullscreenLayout>,

@@ -32,8 +32,7 @@ export function Profile() {
 
   const logout = () => {
     localStorage.clear();
-    // Full reload prevents stale React state from protected screens
-    window.location.href = '/onboarding/welcome';
+    window.location.reload();
   };
 
   return (
